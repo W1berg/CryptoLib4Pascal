@@ -4181,7 +4181,6 @@ begin
       F_currentStream := aos.GetOctetStream();
     end
   end;
-  result := 0;
 end;
 
 function TConstructedOctetStream.ReadByte: Int32;
@@ -4229,8 +4228,6 @@ begin
 
     F_currentStream := aos.GetOctetStream();
   end;
-
-  result := 0;
 end;
 
 { TIndefiniteLengthInputStream }

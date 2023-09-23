@@ -29,6 +29,7 @@ uses
   ClpIKeyParameter,
   ClpCheck,
   ClpBits,
+  ClpBitConverter,
   ClpConverters,
   ClpArrayUtils,
   ClpCryptoLibTypes;

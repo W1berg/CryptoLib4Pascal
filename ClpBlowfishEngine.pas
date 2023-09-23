@@ -28,6 +28,7 @@ uses
   ClpICipherParameters,
   ClpIBlowfishEngine,
   ClpCheck,
+  ClpBitConverter,
   ClpConverters,
   ClpArrayUtils,
   ClpCryptoLibTypes;

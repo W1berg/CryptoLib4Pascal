@@ -5,6 +5,7 @@ unit SbpBase64;
 interface
 
 uses
+  SysUtils,
   SbpBits,
   SbpUtilities,
   SbpSimpleBaseLibTypes,

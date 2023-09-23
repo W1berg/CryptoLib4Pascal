@@ -5,6 +5,7 @@ unit SbpBase58;
 interface
 
 uses
+  SysUtils,
   Math,
   SbpSimpleBaseLibTypes,
   SbpUtilities,

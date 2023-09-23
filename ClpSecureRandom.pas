@@ -22,6 +22,7 @@ unit ClpSecureRandom;
 interface
 
 uses
+  DateUtils,
   Math,
   SyncObjs,
   SysUtils,
@@ -201,9 +202,6 @@ begin
       Exit;
     end;
   end;
-
-  Result := 0; // to make FixInsight Happy :)
-
 end;
 
 function TSecureRandom.Next: Int32;

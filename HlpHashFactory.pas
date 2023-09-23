@@ -264,11 +264,11 @@ type
 
       class function CreateTiger_4_128(): IHash; static;
       class function CreateTiger_4_160(): IHash; static;
-      class function CreateTiger_4_192(): IHash; static;
+      // class function CreateTiger_4_192(): IHash; static;
 
       class function CreateTiger_5_128(): IHash; static;
       class function CreateTiger_5_160(): IHash; static;
-      class function CreateTiger_5_192(): IHash; static;
+      // class function CreateTiger_5_192(): IHash; static;
 
       /// <summary>
       ///
@@ -1234,10 +1234,10 @@ begin
   Result := TTiger_160.CreateRound4();
 end;
 
-class function THashFactory.TCrypto.CreateTiger_4_192: IHash;
-begin
-  Result := TTiger_192.CreateRound4();
-end;
+// class function THashFactory.TCrypto.CreateTiger_4_192: IHash;
+// begin
+// Result := TTiger_192.CreateRound4();
+// end;
 
 class function THashFactory.TCrypto.CreateTiger_5_128: IHash;
 begin
@@ -1249,10 +1249,10 @@ begin
   Result := TTiger_160.CreateRound5();
 end;
 
-class function THashFactory.TCrypto.CreateTiger_5_192: IHash;
-begin
-  Result := TTiger_192.CreateRound5();
-end;
+// class function THashFactory.TCrypto.CreateTiger_5_192: IHash;
+// begin
+// Result := TTiger_192.CreateRound5();
+// end;
 
 class function THashFactory.TCrypto.CreateWhirlPool: IHash;
 begin

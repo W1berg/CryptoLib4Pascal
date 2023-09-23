@@ -24,7 +24,7 @@ interface
 uses
 
   HlpIHashInfo,
-  HlpHashFactory,
+  // HlpHashFactory,
   HlpArgon2TypeAndVersion,
   HlpPBKDF_Argon2NotBuildInAdapter,
   ClpPbeParametersGenerator,

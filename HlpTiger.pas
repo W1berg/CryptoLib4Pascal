@@ -199,8 +199,8 @@ type
 
   public
     constructor CreateRound3();
-    constructor CreateRound4();
-    constructor CreateRound5();
+    // constructor CreateRound4();
+    // constructor CreateRound5();
     function Clone(): IHash; override;
 
   end;
@@ -599,15 +599,15 @@ begin
   inherited Create(24, THashRounds.hrRounds3);
 end;
 
-constructor TTiger_192.CreateRound4;
-begin
-  inherited Create(24, THashRounds.hrRounds4);
-end;
+// constructor TTiger_192.CreateRound4;
+// begin
+// inherited Create(24, THashRounds.hrRounds4);
+// end;
 
-constructor TTiger_192.CreateRound5;
-begin
-  inherited Create(24, THashRounds.hrRounds5);
-end;
+// constructor TTiger_192.CreateRound5;
+// begin
+// inherited Create(24, THashRounds.hrRounds5);
+// end;
 
 { TTiger_Base }
 

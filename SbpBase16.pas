@@ -5,6 +5,7 @@ unit SbpBase16;
 interface
 
 uses
+  SysUtils,
   SbpSimpleBaseLibTypes,
   SbpUtilities;
 

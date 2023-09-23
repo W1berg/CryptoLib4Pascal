@@ -30,6 +30,7 @@ uses
   ClpIKeyParameter,
   ClpICipherParameters,
   ClpIParametersWithIV,
+  ClpBitConverter,
   ClpConverters,
   ClpArrayUtils,
   ClpCryptoLibTypes;

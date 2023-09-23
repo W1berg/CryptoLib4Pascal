@@ -26,6 +26,7 @@ uses
   ClpIStreamCipher,
   ClpIChaChaEngine,
   ClpSalsa20Engine,
+  ClpBitConverter,
   ClpConverters,
   ClpArrayUtils,
   ClpCryptoLibTypes;

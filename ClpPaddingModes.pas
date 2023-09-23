@@ -23,7 +23,7 @@ interface
 
 uses
   ClpIBlockCipherPadding,
-  ClpSecureRandom,
+  // ClpSecureRandom,
   ClpISecureRandom,
   ClpCryptoLibTypes,
   ClpIPaddingModes;
@@ -31,23 +31,23 @@ uses
 resourcestring
   SCorruptedPadBlock = 'Pad Block Corrupted';
 
-type
+  (* type
 
-  /// <summary>
-  /// A padder that adds ISO10126-2 padding to a block.
-  /// </summary>
-  TISO10126d2Padding = class sealed(TInterfacedObject, IISO10126d2Padding, IBlockCipherPadding)
+    /// <summary>
+    /// A padder that adds ISO10126-2 padding to a block.
+    /// </summary>
+    TISO10126d2Padding = class sealed(TInterfacedObject, IISO10126d2Padding, IBlockCipherPadding)
 
-  strict private
+    strict private
 
-  var
+    var
     FRandom: ISecureRandom;
     /// <returns>
     /// return the name of the algorithm the cipher implements.
     /// </returns>
     function GetPaddingName: string; inline;
 
-  public
+    public
     /// <summary>
     /// Initialise the padder.
     /// </summary>
@@ -90,7 +90,7 @@ type
     /// </exception>
     function PadCount(const input: TCryptoLibByteArray): Int32;
 
-  end;
+    end; *)
 
 type
 
@@ -383,55 +383,55 @@ implementation
 
 { TISO10126d2Padding }
 
-function TISO10126d2Padding.AddPadding(const input: TCryptoLibByteArray; inOff: Int32): Int32;
-var
+(* function TISO10126d2Padding.AddPadding(const input: TCryptoLibByteArray; inOff: Int32): Int32;
+  var
   code: Byte;
-begin
+  begin
   code := Byte(System.Length(input) - inOff);
 
   while (inOff < (System.Length(input) - 1)) do
   begin
-    input[inOff] := Byte(FRandom.NextInt32);
-    System.Inc(inOff);
+  input[inOff] := Byte(FRandom.NextInt32);
+  System.Inc(inOff);
   end;
 
   input[inOff] := code;
 
   result := code;
-end;
+  end;
 
-function TISO10126d2Padding.GetPaddingName: string;
-begin
+  function TISO10126d2Padding.GetPaddingName: string;
+  begin
   result := 'ISO10126-2';
-end;
+  end;
 
-procedure TISO10126d2Padding.Init(const random: ISecureRandom);
-begin
+  procedure TISO10126d2Padding.Init(const random: ISecureRandom);
+  begin
   if random <> nil then
   begin
-    FRandom := random;
+  FRandom := random;
   end
   else
   begin
-    FRandom := TSecureRandom.Create();
+  FRandom := TSecureRandom.Create();
   end;
-end;
+  end;
 
-function TISO10126d2Padding.PadCount(const input: TCryptoLibByteArray): Int32;
-var
+  function TISO10126d2Padding.PadCount(const input: TCryptoLibByteArray): Int32;
+  var
   count: Int32;
-begin
+  begin
 
   count := input[System.Length(input) - 1] and $FF;
 
   if (count > System.Length(input)) then
   begin
-    raise EInvalidCipherTextCryptoLibException.CreateRes(@SCorruptedPadBlock);
+  raise EInvalidCipherTextCryptoLibException.CreateRes(@SCorruptedPadBlock);
   end;
 
   result := count;
 
-end;
+  end; *)
 
 { TISO7816d4Padding }
 
